@@ -45,7 +45,14 @@ export class SalonService {
     }
     return null;
   }
-
+  public getMsg(id: number) {
+    for (const salon of this.salons) {
+      if (salon.id === id) {
+        return this.http
+          .get(this.adresse + id + '/message');
+      }
+    }
+  }
 }
 
 

@@ -12,7 +12,6 @@ const routes: Routes = [
   {path: 'salon', component: SalonComponent},
   {path: 'salon/:id', component: SalonDetailComponent},
   {path: 'salon/nom/exist', component: SalonDetailComponent},
-
 ]
 
 @NgModule({
