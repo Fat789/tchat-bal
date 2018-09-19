@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import {UserModule} from './user/user.module';
 import {RouterModule, Routes} from '@angular/router';
+import {AppConfigService} from './app-config.service';
 
 const routes: Routes = [];
 
@@ -22,6 +23,7 @@ const routes: Routes = [];
     RouterModule.forRoot(routes)
   ],
   providers: [
+    AppConfigService
   ],
   bootstrap: [AppComponent]
 })
