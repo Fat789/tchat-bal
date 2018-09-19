@@ -1,3 +1,5 @@
+import {User} from '../user/user';
+
 export class Salon{
   private id: number;
   private nom: string;

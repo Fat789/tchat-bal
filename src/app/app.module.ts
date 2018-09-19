@@ -1,14 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-
 import { AppComponent } from './app.component';
 import {UserModule} from './user/user.module';
 import {RouterModule, Routes} from '@angular/router';
 import {AppConfigService} from './app-config.service';
-
 import {SalonModule} from './salon/salon.module';
+
 const routes: Routes = [];
 
 @NgModule({
@@ -20,8 +18,8 @@ const routes: Routes = [];
     FormsModule,
     UserModule,
     RouterModule,
-    RouterModule.forRoot(routes)
-    SalonModule
+    RouterModule.forRoot(routes),
+    SalonModule,
   ],
   providers: [
     AppConfigService
