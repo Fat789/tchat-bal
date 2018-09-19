@@ -1,3 +1,22 @@
-<p>
-  salon-detail works!
-</p>
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Identifiant</th>
+      <th>Nom</th>
+      <th>Description</th>
+      <th>Date de Création</th>
+      <th>Créateur</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngIf="salon.createur">
+      <td>{{salon.id}}</td>
+      <td>{{salon.nom}}</td>
+      <td>{{salon.description}}</td>
+      <td>{{salon.dateCreation | date: 'dd/MM/yyyy'}}</td>
+      <td>{{salon.createur.username}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

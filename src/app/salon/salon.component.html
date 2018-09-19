@@ -9,7 +9,7 @@
     </thead>
     <tbody>
     <tr *ngFor="let salon of list()">
-      <td [routerLink]="['salon/' + salon.id]">{{salon.id}}</td>
+      <td [routerLink]="['/salon/'+salon.id]">{{salon.id}}</td>
       <td>{{salon.nom}}</td>
       <td>{{salon.description}}</td>
     </tr>
