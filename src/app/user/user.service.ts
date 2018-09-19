@@ -21,23 +21,7 @@ export class UserService {
 
   public findByUsername(username: string, http?: boolean): any {
 
-      if(http){
-        return this.http
-          .get(this.apiUrl + username);
-      }
-      for (const user of this.users) {
-        if (user.username === username) {
-          return user;
-        }
-      }
-
-      return null;
-    }
-
-
-  public findIfExist (username: string, http?: boolean): any {
-
-    if(http){
+    if (http) {
       return this.http
         .get(this.apiUrl + username);
     }
@@ -49,5 +33,22 @@ export class UserService {
 
     return null;
   }
+
+
+  public findIfExist(username: string, http?: boolean): any {
+
+    if (http) {
+      return this.http
+        .get(this.apiUrl + username);
+    }
+    for (const user of this.users) {
+      if (user.username === username) {
+        return user;
+      }
+    }
+
+    return null;
+  }
+}
 
 
