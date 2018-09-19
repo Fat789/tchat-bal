@@ -25,6 +25,6 @@ const routes: Routes = [
     SalonComponent,
     SalonDetailComponent,
   ],
-  providers: [SalonService, ],
+  providers: [SalonService,],
 })
 export class SalonModule { }

@@ -6,7 +6,6 @@ import {UserModule} from './user/user.module';
 import {RouterModule, Routes} from '@angular/router';
 import {AppConfigService} from './app-config.service';
 import {SalonModule} from './salon/salon.module';
-import { MessageComponent } from './message/message.component';
 import {MessageModule} from './message/message.module';
 
 const routes: Routes = [];
