@@ -9,3 +9,11 @@
 h1{
   color: crimson;
 }
+
+.encadreMessage {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: justify;
+  text-align: right;
+  color: black;
+}
