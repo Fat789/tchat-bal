@@ -10,7 +10,9 @@ import { SalonDetailComponent } from './salon-detail.component';
 
 const routes: Routes = [
   {path: 'salon', component: SalonComponent},
-  {path: 'salon/:id', component: SalonDetailComponent}
+  {path: 'salon/:id', component: SalonDetailComponent},
+  {path: 'salon/nom/exist', component: SalonDetailComponent},
+
 ]
 
 @NgModule({
@@ -25,6 +27,6 @@ const routes: Routes = [
     SalonComponent,
     SalonDetailComponent,
   ],
-  providers: [SalonService,],
+  providers: [SalonService],
 })
 export class SalonModule { }

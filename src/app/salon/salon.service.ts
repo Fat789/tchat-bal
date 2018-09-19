@@ -7,7 +7,7 @@ import {AppConfigService} from '../app-config.service';
 export class SalonService {
   adresse: string;
   salons: Array<Salon> = new Array<Salon>();
-
+  exist: boolean;
   constructor(private http: Http, private appConfig: AppConfigService) {
 
     this.adresse = this.appConfig.apiUrl + 'salon/';
@@ -36,4 +36,16 @@ export class SalonService {
     return null;
 
   }
+  public salonExists(nom): any {
+    if (this.exist === true) {
+      return this.http
+      .get(this.adresse);
+    } else {
+      this.exist !== false;
+    }
+    return null;
+  }
+
 }
+
+
