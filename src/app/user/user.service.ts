@@ -8,7 +8,7 @@ import {AppConfigService} from '../app-config.service';
 @Injectable()
 export class UserService {
   users: Array<User> = new Array<User>();
-
+  user: User = new User();
   apiUrl: string;
 
   constructor(private http: Http, private appConfig: AppConfigService) {
@@ -30,25 +30,36 @@ export class UserService {
         return user;
       }
     }
-
     return null;
   }
 
+  public findIfExist (username: string, http?: boolean): any {
 
-  public findIfExist(username: string, http?: boolean): any {
-
-    if (http) {
-      return this.http
-        .get(this.apiUrl + username);
+    if(http) {
+      if (http) {
+        return this.http
+          .get(this.apiUrl + username + 'exists');
     }
-    for (const user of this.users) {
-      if (user.username === username) {
-        return user;
+      for (const user of this.users) {
+        if (user.username === username) {
+          return user;
+        }
+        else {
+        return alert('Ce nom d\'utilisateur n\'existe pas');
+        }
       }
     }
-
-    return null;
   }
+
+  public findUsernameWithSalon (username: string, http?: boolean): any {
+    if(http){
+      return this.http
+        .get(this.apiUrl + username + 'salon');
+    }
+    return this.user.salons;
+
+
+}
 }
 
 

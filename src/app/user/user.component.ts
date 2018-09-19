@@ -16,4 +16,7 @@ export class UserComponent implements OnInit {
   ngOnInit() {
   }
 
+  public list (username: string) {
+    return this.userService.findByUsername(username);
+  }
 }
