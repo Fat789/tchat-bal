@@ -1,7 +1,7 @@
 import {User} from '../user/user';
 
 export class Salon{
-  private id: number;
+  public id: number;
   private nom: string;
   private description: string;
   private dtCreation: Date;
