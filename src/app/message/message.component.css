@@ -10,10 +10,24 @@ h1{
   color: crimson;
 }
 
-.encadreMessage {
+.cadreMessage {
   border: 1px solid black;
-  padding: 8px;
-  text-align: justify;
-  text-align: right;
+  height: 300px;
+  width: 500px;
+  text-align: left;
+  color: black;
+}
+
+.button1 {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19);
+  background-color: greenyellow;
+  color: darkslategray;
+}
+
+.cadreMessageRep{
+  border: 1px solid black;
+  height: 50px;
+  width: 500px;
+  text-align: left;
   color: black;
 }
