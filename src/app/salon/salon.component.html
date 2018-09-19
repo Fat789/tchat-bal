@@ -7,5 +7,12 @@
       <th>Description</th>
     </tr>
     </thead>
+    <tbody>
+    <tr *ngFor="let salon of list()">
+      <td>{{salon.id}}</td>
+      <td>{{salon.nom()}}</td>
+      <td>{{salon.description}}</td>
+    </tr>
+    </tbody>
   </table>
 </div>
