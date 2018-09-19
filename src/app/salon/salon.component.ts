@@ -15,7 +15,4 @@ export class SalonComponent implements OnInit {
     return this.salonService.findAll();
   }
 
-  public detail(id:  number){
-    return this.salonService.findById(id);
-  }
 }
