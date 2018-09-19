@@ -7,15 +7,13 @@ import {RouterModule, Routes} from '@angular/router';
 import {AppConfigService} from './app-config.service';
 import {SalonModule} from './salon/salon.module';
 import { MessageComponent } from './message/message.component';
+import {MessageModule} from './message/message.module';
 
 const routes: Routes = [];
 
 @NgModule({
   declarations: [
-    MessageComponent,
-    MessageComponent,
-    MessageComponent,
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +22,7 @@ const routes: Routes = [];
     RouterModule,
     RouterModule.forRoot(routes),
     SalonModule,
+    MessageModule
   ],
   providers: [
     AppConfigService
